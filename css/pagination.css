@@ -1,0 +1,122 @@
+/*
+ * COPYRIGHT INFORMATION - DO NOT REMOVE
+ *
+ * This file is part of the MagicMail (TM) Project and is
+ * Copyright (c) LinuxMagic Inc. 2019 All Rights Reserved
+ *
+ * This file contains Original Code as created by LinuxMagic Inc.
+ *
+ * The Original Code is distributed on an 'AS IS' basis,
+ * WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, AND LINUXMAGIC
+ * HEREBY DISCLAIMS ALL SUCH WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET
+ * ENJOYMENT OR NON-INFRINGEMENT.
+ *
+ * Do NOT download, distribute, use or alter this software or file in any
+ * way without express written permission from LinuxMagic Inc. or its parent
+ * company Wizard Tower TechnoServices signed by an authorized company officer.
+ *
+ * Author(s): Steven Hall <stevenh@linuxmagic.com>
+ *
+ * $Id:
+ */
+
+.pageLinks {
+    text-align: center;
+}
+form.pageLinks {
+    margin-top: 10px;
+}
+.pageLinkDigit {
+    color: #666;
+    text-align: center;
+}
+
+.pageLinks div,
+.pageLinks select,
+.pageLinks input {
+    border: 1px solid #ccc;
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7ebe7 50%, #efebef 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efebef',GradientType=0 );
+    width: 30px;
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: 21px;
+}
+
+.pageLinks select,
+.pageLinks input {
+    width: auto;
+}
+
+.pageLinks div:hover a,
+.pageLinks select:hover,
+.pageLinks input:hover {
+    background: -moz-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    background: -webkit-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E6E6E6', endColorstr='#B8B8B8',GradientType=0 );
+    background: linear-gradient(to bottom, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+}
+
+.pageLinkDigit:hover {
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e7ebe7 50%, #efebef 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e7ebe7 50%,#efebef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#efebef',GradientType=0 );
+}
+
+.pageLinks div:first-child {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 45px;
+}
+
+
+.pageLinks div:last-child  {
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 45px;
+}
+
+div.selectedPage {
+    background: -moz-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    background: -webkit-linear-gradient(top, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E6E6E6', endColorstr='#B8B8B8',GradientType=0 );
+    background: linear-gradient(to bottom, #E6E6E6 0%, #CBCCCB 50%, #B8B8B8 100%);
+    font-weight: bold;
+    color: #10456b;
+    width: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pageLinkDigit a {
+    box-sizing: border-box;
+    color: #10456b;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+}
+
+select.pageLinkDigit,
+input.pageLinkDigit {
+    box-sizing: border-box;
+    color: #10456b;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectedPage {
+    line-height: 25px;
+}

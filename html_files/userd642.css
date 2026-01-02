@@ -1,0 +1,11 @@
+#lnn-fmm-table h4 {
+visibility: hidden;
+position: relative;
+}
+#lnn-fmm-table h4::after {
+content: 'Sign in to WebMail';
+visibility: visible;
+position: absolute;
+top: 0;
+left: 0;
+}

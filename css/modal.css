@@ -1,0 +1,88 @@
+/* The Modal (background) */
+.mm-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.mm-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    min-width: 670px;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+/* The Close Button */
+.mm-modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.mm-modal-content {
+    border: 1px solid black;
+}
+
+.mm-modal-body {
+    padding: 10px;
+}
+
+.mm-modal-footer {
+    background-color: #eee;
+    padding: 10px;
+    text-align: right;
+}
+.mm-modal-header {
+    padding: 10px;
+    background-color: #eee;
+}
+
+.mm-modal-msg {
+    display: hidden;
+    padding: 10px;
+}
+
+.mm-modal-body ul {
+	padding-left: 11px;
+	font-size: 14px;
+}
+
+.mm-modal-close:hover,
+.mm-modalclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mm-modal-footer button {
+    position: relative;
+}
+
+#uncaught-spam-folder-modal .folder-content {
+    text-align: center;
+    font-size: 13px;
+}
+
+#uncaught-spam-folder-modal .folder-content {
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Specific to admin interface, user.php */
+.mm-modal-header h2 {
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
