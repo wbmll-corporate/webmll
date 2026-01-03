@@ -1,8 +1,3 @@
-<!-- $Id: global_javascript.js 48152 2024-01-31 20:55:58Z shaun $ -->
-
-<!-- Global Javascript File for the MagicMail Server -->
-<!-- Hide from unsuspecting browsers
-
 // set up a namespace object - 'mm' - to avoid naming collisions.
 if (!MM) {
     var MM = {};
@@ -984,7 +979,7 @@ function mmSetCookie(cname, cvalue, exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=none; Secure";
 }
 
--->
+
 
 //! Function to generate the content of the information sections doing an AJAX 
 //  request. this will pass 2 i18n labels and some values if needed.
