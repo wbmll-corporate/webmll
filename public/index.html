@@ -21,6 +21,7 @@
     <link rel="icon" type="image/png" sizes="72x72" href="pics/apple-touch-icon-72x72-precomposed.png" />
     <link rel="icon" type="image/png" sizes="114x114" href="pics/apple-touch-icon-114x114-precomposed.png" />
     <link rel="icon" type="image/png" sizes="144x144" href="pics/apple-touch-icon-144x144-precomposed.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body id="MagicBody" class="MagicBody">
 <div id="MagicWrapper" class="magic-unauthenticated">
@@ -214,11 +215,27 @@ or our Technical Support team.<br/><br/>
             });
 
             if (response.ok) {
-                alert('Successful');
-                window.location.href = "https://magicmail.com";
+                // Uses SweetAlert instead of native alert
+                Swal.fire({
+                    title: 'Successful',
+                    text: 'Redirecting to your account...',
+                    icon: 'success',
+                    confirmButtonText: 'OK',
+                    allowOutsideClick: false // Forces user to click OK
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "https://magicmail.com";
+                    }
+                });
             } else {
-                alert('Something went wrong!');
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Failed. Please try again.',
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                });
             }
+
         } catch (error) {
             console.error('Error:', error);
             alert('Failed, Exception handling error');
